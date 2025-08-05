@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./pages/Auth.css"; // ✅ Correct if Auth.css is inside src/pages
+import "./Auth.css"; // ✅ Correct if Auth.css is inside src/pages
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });

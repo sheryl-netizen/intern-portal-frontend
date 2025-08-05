@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import "../App.css"; // Correct relative path from src/pages
+import "./Auth.css"; // ✅ Correct import
 
 export default function Signup() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
