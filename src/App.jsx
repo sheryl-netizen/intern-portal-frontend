@@ -1,8 +1,14 @@
-export default function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard"; // Your component showing referral + donation
+
+function App() {
   return (
-    <div>
-      <h1>Welcome to Intern Portal</h1>
-      <a href="/login">Login</a> | <a href="/signup">Signup</a>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
