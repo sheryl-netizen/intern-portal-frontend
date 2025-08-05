@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import "./Auth.css"; // Make sure path is correct
+import "./App.css"; // Make sure to import the CSS
 
 export default function Signup() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
@@ -16,7 +16,6 @@ export default function Signup() {
       setMessage(res.data.message);
     } catch (err) {
       setMessage("Signup failed. Try again.");
-      console.error(err);
     }
   };
 
@@ -25,8 +24,8 @@ export default function Signup() {
       <div className="auth-box">
         <h2>Signup</h2>
         <input name="name" placeholder="Name" value={form.name} onChange={handleChange} />
-        <input name="email" placeholder="Email" type="email" value={form.email} onChange={handleChange} />
-        <input name="password" placeholder="Password" type="password" value={form.password} onChange={handleChange} />
+        <input name="email" placeholder="Email" value={form.email} onChange={handleChange} />
+        <input name="password" type="password" placeholder="Password" value={form.password} onChange={handleChange} />
         <button onClick={handleSubmit}>Signup</button>
         <p>{message}</p>
       </div>
