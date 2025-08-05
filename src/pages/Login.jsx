@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./pages/Auth.css";
+import "./pages/Auth.css"; // ✅ Correct if Auth.css is inside src/pages
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -19,7 +19,7 @@ export default function Login() {
       console.log(res.data);
 
       // 👇 Redirect to dashboard after login success
-      navigate("/dashboard"); 
+      navigate("/dashboard");
     } catch (err) {
       setMessage("Login failed. Please check your credentials.");
       console.error(err);
