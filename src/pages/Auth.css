@@ -1,24 +1,32 @@
-/* Center the form in the full viewport */
+/* Center the form in the full viewport *//* Make sure this is applied to your outer container */
 .auth-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Box holding the login/signup form */
+/* The box itself */
 .auth-box {
-  background: #fff;
-  padding: 40px 30px;
+  background: #ffffff;
+  padding: 2.5rem;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
   text-align: center;
-  animation: fadeIn 0.4s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
 }
+
 
 /* Title */
 .auth-box h2 {
