@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard"; // Your component showing referral + donation
+import Dashboard from "./pages/Dashboard"; // Shows referral and donation
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <Routes>
